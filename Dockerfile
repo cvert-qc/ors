@@ -16,4 +16,6 @@ RUN mv ./conf /home/ors/ors-conf
 RUN rm -rf /home/ors/ors-core/data/osm_file.pbf
 RUN mv ./quebec-latest.osm.pbf /home/ors/ors-core/data/osm_file.pbf
 
+COPY entrypoint.sh .
 
+#RUN sed -i "2i sed -i 's/8080/\$PORT/g' /home/ors/tomcat/conf/server.xml" /home/ors/ors-core/docker-entrypoint.sh
