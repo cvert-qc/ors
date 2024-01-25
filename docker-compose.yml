@@ -6,10 +6,10 @@ services:
       - "8080:5631"
       - "9001:9001"
         #image: openrouteservice/openrouteservice:v7.1.1
-    user: "${UID:-0}:${GID:-0}"
-    entrypoint : "/home/ors/entrypoint.sh"
-    command: 
-      - "/home/ors"
+    user: 0000:0000
+      #entrypoint : "/home/ors/entrypoint.sh"
+      #command: 
+      #- "/home/ors"
     build:
       context: .
       dockerfile : Dockerfile
