@@ -14,3 +14,5 @@ RUN mv ./conf /home/ors/ors-conf
 
 RUN rm -rf /home/ors/ors-core/data/osm_file.pbf
 RUN mv ./quebec-latest.osm.pbf /home/ors/ors-core/data/osm_file.pbf
+
+COPY ./entrypoint.sh .
