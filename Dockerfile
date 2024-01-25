@@ -2,7 +2,7 @@ FROM openrouteservice/openrouteservice:v7.1.1
 
 COPY ./volumes.tar.gz .
 
-RUN tar xvjf volumes.tar.gz
+RUN wget https://github.com/cvert-qc/ors/raw/main/volumes.tar.gz?download=
 
 RUN rm -rf /home/ors/ors-core/data/graphs
 RUN mv ./graphs /home/ors/ors-core/data/graphs
