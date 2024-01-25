@@ -3,6 +3,8 @@ build:
     web: Dockerfile
 
 
-  command:
-    - ./entrypoint.sh /home/ors
+run:
+  web:
+    command:
+      - ./entrypoint.sh /home/ors
 
