@@ -16,3 +16,6 @@ RUN rm -rf /home/ors/ors-core/data/osm_file.pbf
 RUN mv ./quebec-latest.osm.pbf /home/ors/ors-core/data/osm_file.pbf
 
 COPY ./entrypoint.sh .
+
+ENTRYPOINT ["./entrypoint.sh"]
+CMD ["/home/ors"]
